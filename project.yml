@@ -5,11 +5,11 @@ sources:
 name: ""
 description: ""
 attribution: ""
-mtime: 1366643335535
+mtime: 1366650077722
 center: 
-  - 2.426139166336748
-  - 9.311894474573288
-  - 5
+  - 0
+  - 20
+  - 3
 bounds: 
   - -180
   - -85.0511
