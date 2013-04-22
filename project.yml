@@ -1,0 +1,22 @@
+styles: 
+  - style.mss
+sources: 
+  - mbstreets
+name: ""
+description: ""
+attribution: ""
+mtime: 1366643335535
+center: 
+  - 2.426139166336748
+  - 9.311894474573288
+  - 5
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+minzoom: 0
+maxzoom: 22
+scale: 1
+_prefs: 
+  saveCenter: true
