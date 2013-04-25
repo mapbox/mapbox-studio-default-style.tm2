@@ -4,7 +4,7 @@ sources:
   - mbstreets
 name: ""
 description: ""
-attribution: ""
+attribution: "Map data © OpenStreetMap contributors"
 mtime: 1366650077722
 center: 
   - 0
