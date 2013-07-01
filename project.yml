@@ -1,7 +1,7 @@
 styles: 
   - style.mss
 sources: 
-  - mbstreets
+  - mapbox://mapbox.mapbox-streets-v3
 name: ""
 description: ""
 attribution: "Map data © OpenStreetMap contributors"

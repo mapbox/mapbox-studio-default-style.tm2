@@ -94,7 +94,8 @@ Map {
     [zoom>=14] { text-size: 18; }
   }
   [type='hamlet'],
-  [type='suburb'] {
+  [type='suburb'],
+  [type='neighbourhood'] {
     text-name: @name;
     text-face-name: 'Source Sans Pro Regular';
     text-fill: #666;
