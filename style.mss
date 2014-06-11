@@ -3,12 +3,12 @@
 
 // Fonts //
 @sans: 'Source Sans Pro Regular';
+@sans_italic: 'Source Sans Pro Italic';
 @sans_bold: 'Source Sans Pro Semibold';
 
 // Common Colors //
 @land: #fff;
 @water: #c3e6ff;
-@park: #cec;
 
 Map { background-color: @land; }
 
@@ -96,7 +96,7 @@ Map { background-color: @land; }
   [zoom>=16][area>10000],
   [zoom>=17] {
     text-name: @name;
-    text-face-name: 'Source Sans Pro Italic';
+    text-face-name: @sans_italic;
     text-fill: darken(@water, 30%);
     text-size: 13;
     text-wrap-width: 100;
