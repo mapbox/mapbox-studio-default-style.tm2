@@ -1,46 +1,33 @@
 // Languages: name (local), name_en, name_fr, name_es, name_de
 @name: '[name_en]';
 
+// Fonts //
+@sans: 'Source Sans Pro Regular';
+@sans_italic: 'Source Sans Pro Italic';
+@sans_bold: 'Source Sans Pro Semibold';
+
 // Common Colors //
+@land: #fff;
 @water: #c3e6ff;
-@park: #cec;
 
-Map {
-  background-color:#fff;
-}
-
+Map { background-color: @land; }
 
 // Political boundaries //
 
-#admin {
+#admin[admin_level=2][maritime=0] {
   line-join: round;
   line-color: #bbe;
-  [maritime=1] { line-color: darken(@water, 3%); }
-  // Countries
-  [admin_level=2] {
-    line-width: 1.4;
-    [zoom>=6] { line-width: 2; }
-    [zoom>=8] { line-width: 4; }
-    [disputed=1] { line-dasharray: 4,4; }
-  }
-  // States / Provices / Subregions
-  [admin_level>=3] {
-    line-width: 0.4;
-    line-dasharray: 10,3,3,3;
-    [zoom>=6] { line-width: 1; }
-    [zoom>=8] { line-width: 2; }
-    [zoom>=12] { line-width: 3; }
-  }
+  line-width: 1.4;
+  [zoom>=6] { line-width: 2; }
+  [zoom>=8] { line-width: 4; }
+  [disputed=1] { line-dasharray: 4,4; }
 }
-
 
 // Places //
 
 #country_label[zoom>=3] {
   text-name: @name;
-  text-face-name: 'Source Sans Pro Bold';
-  text-wrap-width: 100;
-  text-wrap-before: true;
+  text-face-name: @sans_bold;
   text-fill: #66a;
   text-size: 12;
   [zoom>=3][scalerank=1],
@@ -57,39 +44,30 @@ Map {
   }
 }
 
-#country_label_line {
-  line-color: #324;
-  line-opacity: 0.05;
-}
+#country_label_line { line-color: fadeout(#66a,75%); }
 
-#place_label {
+#place_label[localrank<=2] {
   [type='city'][zoom<=15] {
     text-name: @name;
-    text-face-name: 'Source Sans Pro Semibold';
+    text-face-name: @sans_bold;
     text-fill: #444;
     text-size: 16;
-    text-wrap-width: 100;
-    text-wrap-before: true;
     [zoom>=10] { text-size: 18; }
     [zoom>=12] { text-size: 24; }
   }
   [type='town'][zoom<=17] {
     text-name: @name;
-    text-face-name: 'Source Sans Pro Regular';
+    text-face-name: @sans;
     text-fill: #333;
     text-size: 14;
-    text-wrap-width: 100;
-    text-wrap-before: true;
     [zoom>=10] { text-size: 16; }
     [zoom>=12] { text-size: 20; }
   }
   [type='village'] {
     text-name: @name;
-    text-face-name: 'Source Sans Pro Regular';
+    text-face-name: @sans;
     text-fill: #444;
     text-size: 12;
-    text-wrap-width: 100;
-    text-wrap-before: true;
     [zoom>=12] { text-size: 14; }
     [zoom>=14] { text-size: 18; }
   }
@@ -97,16 +75,13 @@ Map {
   [type='suburb'],
   [type='neighbourhood'] {
     text-name: @name;
-    text-face-name: 'Source Sans Pro Regular';
+    text-face-name: @sans;
     text-fill: #666;
     text-size: 12;
-    text-wrap-width: 100;
-    text-wrap-before: true;
     [zoom>=14] { text-size: 14; }
     [zoom>=16] { text-size: 16; }
   }
 }
-
 
 // Water Features //
 
@@ -121,7 +96,7 @@ Map {
   [zoom>=16][area>10000],
   [zoom>=17] {
     text-name: @name;
-    text-face-name: 'Source Sans Pro Italic';
+    text-face-name: @sans_italic;
     text-fill: darken(@water, 30%);
     text-size: 13;
     text-wrap-width: 100;
@@ -146,37 +121,6 @@ Map {
     [zoom>=18] { line-width: 3; }
   }
 }
-
-
-// Landuse areas //
-
-#landuse {
-  [class='park'] { polygon-fill: @park; }
-}
-
-#area_label {
-  [class='park'] {
-    [zoom<=13],  // automatic area filtering @ low zooms
-    [zoom>=14][area>500000],
-    [zoom>=16][area>10000],
-    [zoom>=17] {
-      text-name: @name;
-      text-face-name: 'Source Sans Pro Italic';
-      text-fill: darken(@park, 50%);
-      text-size: 13;
-      text-wrap-width: 100;
-      text-wrap-before: true;
-    }
-  }
-}
-
-
-// Buildings //
-
-#building {
-  polygon-fill: #f9f0e3;
-}
-
 
 // Roads & Railways //
 
@@ -203,4 +147,3 @@ Map {
     [class='street_limited'] { line-dasharray: 4,1; }
   }
 }
-
