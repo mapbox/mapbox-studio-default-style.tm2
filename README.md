@@ -1,2 +1,3 @@
-TM2 Default Style
-=================
+mapbox-studio-default-style
+===========================
+Default style used by new style projects in Mapbox Studio.

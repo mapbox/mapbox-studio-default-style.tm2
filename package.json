@@ -1,7 +1,7 @@
 {
-    "name": "tm2-default-style",
+    "name": "mapbox-studio-default-style",
     "version": "0.0.1",
-    "description": "Default style for TM2 with MapBox Streets vector tiles.",
+    "description": "Default style project for Mapbox Studio.",
     "private": true,
     "main": "./package.json"
 }
