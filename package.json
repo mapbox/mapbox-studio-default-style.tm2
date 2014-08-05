@@ -2,6 +2,5 @@
     "name": "mapbox-studio-default-style",
     "version": "0.0.1",
     "description": "Default style project for Mapbox Studio.",
-    "private": true,
     "main": "./package.json"
 }
