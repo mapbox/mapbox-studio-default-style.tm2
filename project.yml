@@ -1,15 +1,15 @@
-_prefs:
+_prefs: 
   saveCenter: true
-_properties:
-   bridge:
-     "group-by": layer
+_properties: 
+  bridge: 
+    "group-by": layer
 attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
-bounds:
+bounds: 
   - -180
   - -85.0511
   - 180
   - 85.0511
-center:
+center: 
   - 0
   - 20
   - 3
@@ -21,6 +21,6 @@ maxzoom: 22
 minzoom: 0
 name: ''
 source: "mapbox:///mapbox.mapbox-streets-v5"
-styles:
+styles: 
   - style.mss
 template: ''
