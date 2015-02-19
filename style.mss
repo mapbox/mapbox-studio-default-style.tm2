@@ -44,14 +44,13 @@ Map { background-color: @land; }
   }
 }
 
-#country_label_line { line-color: fadeout(#66a,75%); }
-
 #place_label[localrank<=2] {
   [type='city'][zoom<=15] {
     text-name: @name;
     text-face-name: @sans_bold;
     text-fill: #444;
-    text-size: 16;
+    text-size: 14;
+    [zoom>=8] { text-size: 16; }
     [zoom>=10] { text-size: 18; }
     [zoom>=12] { text-size: 24; }
   }
@@ -59,7 +58,8 @@ Map { background-color: @land; }
     text-name: @name;
     text-face-name: @sans;
     text-fill: #333;
-    text-size: 14;
+    text-size: 12;
+    [zoom>=8] { text-size: 14; }
     [zoom>=10] { text-size: 16; }
     [zoom>=12] { text-size: 20; }
   }
@@ -67,7 +67,8 @@ Map { background-color: @land; }
     text-name: @name;
     text-face-name: @sans;
     text-fill: #444;
-    text-size: 12;
+    text-size: 10;
+    [zoom>=10] { text-size: 12; }
     [zoom>=12] { text-size: 14; }
     [zoom>=14] { text-size: 18; }
   }
