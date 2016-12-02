@@ -1,6 +1,10 @@
 {
-    "name": "mapbox-studio-default-style",
-    "version": "2.0.0",
-    "description": "Default style project for Mapbox Studio.",
-    "main": "./package.json"
+  "name": "@mapbox/mapbox-studio-default-style",
+  "version": "2.0.0",
+  "description": "Default style project for Mapbox Studio.",
+  "main": "./package.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mapbox/mapbox-studio-default-style.tm2.git"
+  }
 }
